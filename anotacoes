@@ -1,0 +1,59 @@
+Exemplo:
+Funcionalidade: Acessar o site da Alura
+Como aluno
+Quero poder acessar o site da Alura
+Para ver quais cursos estão disponíveis
+
+    Cenário:
+        Dado que estou com o navegador aberto
+        Quando visito "http://alura.com.br"
+        Então eu vejo que o título da página contém a palavra "Alura"
+
+Exemplo 2: Cadastro de series
+
+Funcionalidade: Acessar o site das séries
+
+    Cenário:
+        Dado que estou com o navegador aberto
+        Quando acesso "http:localhost:8080"
+        Então vejo que o título da página contém a palavra "Séries"
+
+Funcionalidade: Registro de usuários
+    Como visitante
+    Quero poder me registrar
+    Para poder controlar minhas séries
+
+    Cenário:
+        Dados que estou com o navegador aberto
+        E estou em "http://127.0.0.1:8080/novo-usuario"
+        Quando preencho o formulário com informações válidas
+        E envio esse formulário
+        Então eu devo ser redirencionado para página de lista de séries
+        E ver o link "Sair"
+
+Funcionalidade: Cadastro de series
+    Como usuario do sistema
+    Quero poder cadastrar novaas séries 
+    Para poder ter o controle das séries assistidas
+
+    Cenário:
+    Dado que estou com o navegador aberto
+    E estou logado no sistema
+    E estou em "http://127.0.0.1:8080/series"
+    Quando clico em "Adicionar"
+    E preencho o formulário com os dados da série
+    E clico em "Salvar"
+    Então eu devo ser redirecionado para a págia de listagem de séries cadastradas
+    E vejo a mensagem "Série com suas respectivas temporadas e episódios adicionada."
+
+Funcionalidade: Editar nome de uma serie
+    Cenário:
+    Dado que com o navegador aberto
+    E estou logado no sistema
+    E estou em "http://127.0.0.1:8080/series"
+    Quando clico em "Alterar"  
+    E altero a serie para o novo nome
+    E clico em "Salvar"
+    Então a página deve ser recarregada
+    E devo ver o novo nome da serie na lista  
+        
